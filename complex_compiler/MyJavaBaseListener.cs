@@ -45,30 +45,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitCompilationUnit([NotNull] MyJavaParser.CompilationUnitContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.packageDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterPackageDeclaration([NotNull] MyJavaParser.PackageDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.packageDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitPackageDeclaration([NotNull] MyJavaParser.PackageDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.importDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterImportDeclaration([NotNull] MyJavaParser.ImportDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.importDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitImportDeclaration([NotNull] MyJavaParser.ImportDeclarationContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.typeDeclaration"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -80,18 +56,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitTypeDeclaration([NotNull] MyJavaParser.TypeDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.modifier"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterModifier([NotNull] MyJavaParser.ModifierContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.modifier"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitModifier([NotNull] MyJavaParser.ModifierContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classOrInterfaceModifier"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -105,18 +69,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitClassOrInterfaceModifier([NotNull] MyJavaParser.ClassOrInterfaceModifierContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.variableModifier"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterVariableModifier([NotNull] MyJavaParser.VariableModifierContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.variableModifier"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitVariableModifier([NotNull] MyJavaParser.VariableModifierContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classDeclaration"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -128,114 +80,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitClassDeclaration([NotNull] MyJavaParser.ClassDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeParameters"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeParameters([NotNull] MyJavaParser.TypeParametersContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeParameters"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeParameters([NotNull] MyJavaParser.TypeParametersContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeParameter"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeParameter([NotNull] MyJavaParser.TypeParameterContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeParameter"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeParameter([NotNull] MyJavaParser.TypeParameterContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeBound"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeBound([NotNull] MyJavaParser.TypeBoundContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeBound"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeBound([NotNull] MyJavaParser.TypeBoundContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterEnumDeclaration([NotNull] MyJavaParser.EnumDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitEnumDeclaration([NotNull] MyJavaParser.EnumDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumConstants"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterEnumConstants([NotNull] MyJavaParser.EnumConstantsContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumConstants"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitEnumConstants([NotNull] MyJavaParser.EnumConstantsContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumConstant"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterEnumConstant([NotNull] MyJavaParser.EnumConstantContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumConstant"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitEnumConstant([NotNull] MyJavaParser.EnumConstantContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumBodyDeclarations"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterEnumBodyDeclarations([NotNull] MyJavaParser.EnumBodyDeclarationsContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumBodyDeclarations"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitEnumBodyDeclarations([NotNull] MyJavaParser.EnumBodyDeclarationsContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterInterfaceDeclaration([NotNull] MyJavaParser.InterfaceDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitInterfaceDeclaration([NotNull] MyJavaParser.InterfaceDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeList"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeList([NotNull] MyJavaParser.TypeListContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeList"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeList([NotNull] MyJavaParser.TypeListContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classBody"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -249,18 +93,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitClassBody([NotNull] MyJavaParser.ClassBodyContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceBody"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterInterfaceBody([NotNull] MyJavaParser.InterfaceBodyContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceBody"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitInterfaceBody([NotNull] MyJavaParser.InterfaceBodyContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classBodyDeclaration"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -273,17 +105,41 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitClassBodyDeclaration([NotNull] MyJavaParser.ClassBodyDeclarationContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.memberDeclaration"/>.
+	/// Enter a parse tree produced by <see cref="MyJavaParser.methodMemberDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterMemberDeclaration([NotNull] MyJavaParser.MemberDeclarationContext context) { }
+	public virtual void EnterMethodMemberDecl([NotNull] MyJavaParser.MethodMemberDeclContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.memberDeclaration"/>.
+	/// Exit a parse tree produced by <see cref="MyJavaParser.methodMemberDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitMemberDeclaration([NotNull] MyJavaParser.MemberDeclarationContext context) { }
+	public virtual void ExitMethodMemberDecl([NotNull] MyJavaParser.MethodMemberDeclContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="MyJavaParser.fieldMemberDecl"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterFieldMemberDecl([NotNull] MyJavaParser.FieldMemberDeclContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="MyJavaParser.fieldMemberDecl"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitFieldMemberDecl([NotNull] MyJavaParser.FieldMemberDeclContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="MyJavaParser.classMemberDecl"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterClassMemberDecl([NotNull] MyJavaParser.ClassMemberDeclContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="MyJavaParser.classMemberDecl"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitClassMemberDecl([NotNull] MyJavaParser.ClassMemberDeclContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.methodDeclaration"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -297,42 +153,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitMethodDeclaration([NotNull] MyJavaParser.MethodDeclarationContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.genericMethodDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterGenericMethodDeclaration([NotNull] MyJavaParser.GenericMethodDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.genericMethodDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitGenericMethodDeclaration([NotNull] MyJavaParser.GenericMethodDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constructorDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterConstructorDeclaration([NotNull] MyJavaParser.ConstructorDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constructorDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitConstructorDeclaration([NotNull] MyJavaParser.ConstructorDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.genericConstructorDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterGenericConstructorDeclaration([NotNull] MyJavaParser.GenericConstructorDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.genericConstructorDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitGenericConstructorDeclaration([NotNull] MyJavaParser.GenericConstructorDeclarationContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.fieldDeclaration"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -344,90 +164,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitFieldDeclaration([NotNull] MyJavaParser.FieldDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceBodyDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterInterfaceBodyDeclaration([NotNull] MyJavaParser.InterfaceBodyDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceBodyDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitInterfaceBodyDeclaration([NotNull] MyJavaParser.InterfaceBodyDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceMemberDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterInterfaceMemberDeclaration([NotNull] MyJavaParser.InterfaceMemberDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceMemberDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitInterfaceMemberDeclaration([NotNull] MyJavaParser.InterfaceMemberDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterConstDeclaration([NotNull] MyJavaParser.ConstDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitConstDeclaration([NotNull] MyJavaParser.ConstDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constantDeclarator"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterConstantDeclarator([NotNull] MyJavaParser.ConstantDeclaratorContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constantDeclarator"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitConstantDeclarator([NotNull] MyJavaParser.ConstantDeclaratorContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceMethodDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterInterfaceMethodDeclaration([NotNull] MyJavaParser.InterfaceMethodDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceMethodDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitInterfaceMethodDeclaration([NotNull] MyJavaParser.InterfaceMethodDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.genericInterfaceMethodDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterGenericInterfaceMethodDeclaration([NotNull] MyJavaParser.GenericInterfaceMethodDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.genericInterfaceMethodDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitGenericInterfaceMethodDeclaration([NotNull] MyJavaParser.GenericInterfaceMethodDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.variableDeclarators"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterVariableDeclarators([NotNull] MyJavaParser.VariableDeclaratorsContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.variableDeclarators"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitVariableDeclarators([NotNull] MyJavaParser.VariableDeclaratorsContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.variableDeclarator"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -452,42 +188,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitVariableDeclaratorId([NotNull] MyJavaParser.VariableDeclaratorIdContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumConstantName"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterEnumConstantName([NotNull] MyJavaParser.EnumConstantNameContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumConstantName"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitEnumConstantName([NotNull] MyJavaParser.EnumConstantNameContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.type"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -524,30 +224,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitPrimitiveType([NotNull] MyJavaParser.PrimitiveTypeContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeArguments"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeArguments([NotNull] MyJavaParser.TypeArgumentsContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeArguments"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeArguments([NotNull] MyJavaParser.TypeArgumentsContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeArgument"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeArgument([NotNull] MyJavaParser.TypeArgumentContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeArgument"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeArgument([NotNull] MyJavaParser.TypeArgumentContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.qualifiedNameList"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -621,18 +297,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitMethodBody([NotNull] MyJavaParser.MethodBodyContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constructorBody"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterConstructorBody([NotNull] MyJavaParser.ConstructorBodyContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constructorBody"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitConstructorBody([NotNull] MyJavaParser.ConstructorBodyContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.qualifiedName"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -656,174 +320,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitLiteral([NotNull] MyJavaParser.LiteralContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotation"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotation([NotNull] MyJavaParser.AnnotationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotation"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotation([NotNull] MyJavaParser.AnnotationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationName"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationName([NotNull] MyJavaParser.AnnotationNameContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationName"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationName([NotNull] MyJavaParser.AnnotationNameContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValuePairs"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterElementValuePairs([NotNull] MyJavaParser.ElementValuePairsContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValuePairs"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitElementValuePairs([NotNull] MyJavaParser.ElementValuePairsContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValuePair"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterElementValuePair([NotNull] MyJavaParser.ElementValuePairContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValuePair"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitElementValuePair([NotNull] MyJavaParser.ElementValuePairContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValue"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterElementValue([NotNull] MyJavaParser.ElementValueContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValue"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitElementValue([NotNull] MyJavaParser.ElementValueContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValueArrayInitializer"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterElementValueArrayInitializer([NotNull] MyJavaParser.ElementValueArrayInitializerContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValueArrayInitializer"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitElementValueArrayInitializer([NotNull] MyJavaParser.ElementValueArrayInitializerContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationTypeDeclaration([NotNull] MyJavaParser.AnnotationTypeDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationTypeDeclaration([NotNull] MyJavaParser.AnnotationTypeDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeBody"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationTypeBody([NotNull] MyJavaParser.AnnotationTypeBodyContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeBody"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationTypeBody([NotNull] MyJavaParser.AnnotationTypeBodyContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeElementDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationTypeElementDeclaration([NotNull] MyJavaParser.AnnotationTypeElementDeclarationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeElementDeclaration"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationTypeElementDeclaration([NotNull] MyJavaParser.AnnotationTypeElementDeclarationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeElementRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationTypeElementRest([NotNull] MyJavaParser.AnnotationTypeElementRestContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeElementRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationTypeElementRest([NotNull] MyJavaParser.AnnotationTypeElementRestContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationMethodOrConstantRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationMethodOrConstantRest([NotNull] MyJavaParser.AnnotationMethodOrConstantRestContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationMethodOrConstantRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationMethodOrConstantRest([NotNull] MyJavaParser.AnnotationMethodOrConstantRestContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationMethodRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationMethodRest([NotNull] MyJavaParser.AnnotationMethodRestContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationMethodRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationMethodRest([NotNull] MyJavaParser.AnnotationMethodRestContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationConstantRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAnnotationConstantRest([NotNull] MyJavaParser.AnnotationConstantRestContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationConstantRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAnnotationConstantRest([NotNull] MyJavaParser.AnnotationConstantRestContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.defaultValue"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDefaultValue([NotNull] MyJavaParser.DefaultValueContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.defaultValue"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDefaultValue([NotNull] MyJavaParser.DefaultValueContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.block"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -849,18 +345,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitBlockStatement([NotNull] MyJavaParser.BlockStatementContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.localVariableDeclarationStatement"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterLocalVariableDeclarationStatement([NotNull] MyJavaParser.LocalVariableDeclarationStatementContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.localVariableDeclarationStatement"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitLocalVariableDeclarationStatement([NotNull] MyJavaParser.LocalVariableDeclarationStatementContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.localVariableDeclaration"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -885,126 +369,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitStatement([NotNull] MyJavaParser.StatementContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.catchClause"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterCatchClause([NotNull] MyJavaParser.CatchClauseContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.catchClause"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitCatchClause([NotNull] MyJavaParser.CatchClauseContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.catchType"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterCatchType([NotNull] MyJavaParser.CatchTypeContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.catchType"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitCatchType([NotNull] MyJavaParser.CatchTypeContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.finallyBlock"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterFinallyBlock([NotNull] MyJavaParser.FinallyBlockContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.finallyBlock"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitFinallyBlock([NotNull] MyJavaParser.FinallyBlockContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.resourceSpecification"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterResourceSpecification([NotNull] MyJavaParser.ResourceSpecificationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.resourceSpecification"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitResourceSpecification([NotNull] MyJavaParser.ResourceSpecificationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.resources"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterResources([NotNull] MyJavaParser.ResourcesContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.resources"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitResources([NotNull] MyJavaParser.ResourcesContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.resource"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterResource([NotNull] MyJavaParser.ResourceContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.resource"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitResource([NotNull] MyJavaParser.ResourceContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.switchBlockStatementGroup"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterSwitchBlockStatementGroup([NotNull] MyJavaParser.SwitchBlockStatementGroupContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.switchBlockStatementGroup"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitSwitchBlockStatementGroup([NotNull] MyJavaParser.SwitchBlockStatementGroupContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.switchLabel"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterSwitchLabel([NotNull] MyJavaParser.SwitchLabelContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.switchLabel"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitSwitchLabel([NotNull] MyJavaParser.SwitchLabelContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.forControl"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterForControl([NotNull] MyJavaParser.ForControlContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.forControl"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitForControl([NotNull] MyJavaParser.ForControlContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.forInit"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterForInit([NotNull] MyJavaParser.ForInitContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.forInit"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitForInit([NotNull] MyJavaParser.ForInitContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.enhancedForControl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -1017,30 +381,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitEnhancedForControl([NotNull] MyJavaParser.EnhancedForControlContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.forUpdate"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterForUpdate([NotNull] MyJavaParser.ForUpdateContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.forUpdate"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitForUpdate([NotNull] MyJavaParser.ForUpdateContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.parExpression"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterParExpression([NotNull] MyJavaParser.ParExpressionContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.parExpression"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitParExpression([NotNull] MyJavaParser.ParExpressionContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.expressionList"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -1052,30 +392,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitExpressionList([NotNull] MyJavaParser.ExpressionListContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.statementExpression"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterStatementExpression([NotNull] MyJavaParser.StatementExpressionContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.statementExpression"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitStatementExpression([NotNull] MyJavaParser.StatementExpressionContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constantExpression"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterConstantExpression([NotNull] MyJavaParser.ConstantExpressionContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constantExpression"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitConstantExpression([NotNull] MyJavaParser.ConstantExpressionContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -1125,30 +441,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitCreatedName([NotNull] MyJavaParser.CreatedNameContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.innerCreator"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterInnerCreator([NotNull] MyJavaParser.InnerCreatorContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.innerCreator"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitInnerCreator([NotNull] MyJavaParser.InnerCreatorContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.arrayCreatorRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterArrayCreatorRest([NotNull] MyJavaParser.ArrayCreatorRestContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.arrayCreatorRest"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitArrayCreatorRest([NotNull] MyJavaParser.ArrayCreatorRestContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classCreatorRest"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -1160,78 +452,6 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitClassCreatorRest([NotNull] MyJavaParser.ClassCreatorRestContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocation"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterExplicitGenericInvocation([NotNull] MyJavaParser.ExplicitGenericInvocationContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocation"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitExplicitGenericInvocation([NotNull] MyJavaParser.ExplicitGenericInvocationContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArguments"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterNonWildcardTypeArguments([NotNull] MyJavaParser.NonWildcardTypeArgumentsContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArguments"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitNonWildcardTypeArguments([NotNull] MyJavaParser.NonWildcardTypeArgumentsContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeArgumentsOrDiamond"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeArgumentsOrDiamond([NotNull] MyJavaParser.TypeArgumentsOrDiamondContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeArgumentsOrDiamond"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeArgumentsOrDiamond([NotNull] MyJavaParser.TypeArgumentsOrDiamondContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArgumentsOrDiamond"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterNonWildcardTypeArgumentsOrDiamond([NotNull] MyJavaParser.NonWildcardTypeArgumentsOrDiamondContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArgumentsOrDiamond"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitNonWildcardTypeArgumentsOrDiamond([NotNull] MyJavaParser.NonWildcardTypeArgumentsOrDiamondContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.superSuffix"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterSuperSuffix([NotNull] MyJavaParser.SuperSuffixContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.superSuffix"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitSuperSuffix([NotNull] MyJavaParser.SuperSuffixContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocationSuffix"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterExplicitGenericInvocationSuffix([NotNull] MyJavaParser.ExplicitGenericInvocationSuffixContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocationSuffix"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitExplicitGenericInvocationSuffix([NotNull] MyJavaParser.ExplicitGenericInvocationSuffixContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.arguments"/>.
 	/// <para>The default implementation does nothing.</para>

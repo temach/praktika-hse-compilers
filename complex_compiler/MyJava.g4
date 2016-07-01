@@ -18,8 +18,7 @@ classOrInterfaceModifier
     :   (   'public'     // class or interface
         |   'private'    // class or interface
         |   'static'     // class or interface
-        |   'final'      // class only -- does not apply to interfaces
-        )
+        )+
     ;
 
 classDeclaration
@@ -36,9 +35,10 @@ classBodyDeclaration
     ;
 
 memberDeclaration
-    :   methodDeclaration
-    |   fieldDeclaration
-    |   classDeclaration // this is for nested classes
+    :   methodDeclaration                           # methodMemberDecl
+    |   fieldDeclaration                            # fieldMemberDecl
+    // this is for nested classes
+    |   classDeclaration                            # classMemberDecl
     ;
 
 // METHODS
@@ -120,13 +120,13 @@ block
     ;
 
 blockStatement
-    :   localVariableDeclaration ';'
+    :   localVariableDeclaration
     |   statement
     |   typeDeclaration
     ;
 
 localVariableDeclaration
-    :   type variableDeclarator
+    :   type variableDeclarator ';'
     ;
 
 // FOR-EACH loop in java

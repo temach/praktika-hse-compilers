@@ -39,26 +39,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitCompilationUnit([NotNull] MyJavaParser.CompilationUnitContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.packageDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterPackageDeclaration([NotNull] MyJavaParser.PackageDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.packageDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitPackageDeclaration([NotNull] MyJavaParser.PackageDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.importDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterImportDeclaration([NotNull] MyJavaParser.ImportDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.importDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitImportDeclaration([NotNull] MyJavaParser.ImportDeclarationContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.typeDeclaration"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -68,16 +48,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitTypeDeclaration([NotNull] MyJavaParser.TypeDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.modifier"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterModifier([NotNull] MyJavaParser.ModifierContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.modifier"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitModifier([NotNull] MyJavaParser.ModifierContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classOrInterfaceModifier"/>.
 	/// </summary>
@@ -89,16 +59,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitClassOrInterfaceModifier([NotNull] MyJavaParser.ClassOrInterfaceModifierContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.variableModifier"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterVariableModifier([NotNull] MyJavaParser.VariableModifierContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.variableModifier"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitVariableModifier([NotNull] MyJavaParser.VariableModifierContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classDeclaration"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -108,96 +68,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitClassDeclaration([NotNull] MyJavaParser.ClassDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeParameters"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeParameters([NotNull] MyJavaParser.TypeParametersContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeParameters"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeParameters([NotNull] MyJavaParser.TypeParametersContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeParameter"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeParameter([NotNull] MyJavaParser.TypeParameterContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeParameter"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeParameter([NotNull] MyJavaParser.TypeParameterContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeBound"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeBound([NotNull] MyJavaParser.TypeBoundContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeBound"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeBound([NotNull] MyJavaParser.TypeBoundContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterEnumDeclaration([NotNull] MyJavaParser.EnumDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitEnumDeclaration([NotNull] MyJavaParser.EnumDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumConstants"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterEnumConstants([NotNull] MyJavaParser.EnumConstantsContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumConstants"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitEnumConstants([NotNull] MyJavaParser.EnumConstantsContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumConstant"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterEnumConstant([NotNull] MyJavaParser.EnumConstantContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumConstant"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitEnumConstant([NotNull] MyJavaParser.EnumConstantContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumBodyDeclarations"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterEnumBodyDeclarations([NotNull] MyJavaParser.EnumBodyDeclarationsContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumBodyDeclarations"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitEnumBodyDeclarations([NotNull] MyJavaParser.EnumBodyDeclarationsContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterInterfaceDeclaration([NotNull] MyJavaParser.InterfaceDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitInterfaceDeclaration([NotNull] MyJavaParser.InterfaceDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeList"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeList([NotNull] MyJavaParser.TypeListContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeList"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeList([NotNull] MyJavaParser.TypeListContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classBody"/>.
 	/// </summary>
@@ -209,16 +79,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitClassBody([NotNull] MyJavaParser.ClassBodyContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceBody"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterInterfaceBody([NotNull] MyJavaParser.InterfaceBodyContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceBody"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitInterfaceBody([NotNull] MyJavaParser.InterfaceBodyContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classBodyDeclaration"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -229,15 +89,41 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitClassBodyDeclaration([NotNull] MyJavaParser.ClassBodyDeclarationContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.memberDeclaration"/>.
+	/// Enter a parse tree produced by the <c>methodMemberDecl</c>
+	/// labeled alternative in <see cref="MyJavaParser.memberDeclaration"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterMemberDeclaration([NotNull] MyJavaParser.MemberDeclarationContext context);
+	void EnterMethodMemberDecl([NotNull] MyJavaParser.MethodMemberDeclContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.memberDeclaration"/>.
+	/// Exit a parse tree produced by the <c>methodMemberDecl</c>
+	/// labeled alternative in <see cref="MyJavaParser.memberDeclaration"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitMemberDeclaration([NotNull] MyJavaParser.MemberDeclarationContext context);
+	void ExitMethodMemberDecl([NotNull] MyJavaParser.MethodMemberDeclContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>fieldMemberDecl</c>
+	/// labeled alternative in <see cref="MyJavaParser.memberDeclaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFieldMemberDecl([NotNull] MyJavaParser.FieldMemberDeclContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>fieldMemberDecl</c>
+	/// labeled alternative in <see cref="MyJavaParser.memberDeclaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFieldMemberDecl([NotNull] MyJavaParser.FieldMemberDeclContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>classMemberDecl</c>
+	/// labeled alternative in <see cref="MyJavaParser.memberDeclaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterClassMemberDecl([NotNull] MyJavaParser.ClassMemberDeclContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>classMemberDecl</c>
+	/// labeled alternative in <see cref="MyJavaParser.memberDeclaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitClassMemberDecl([NotNull] MyJavaParser.ClassMemberDeclContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.methodDeclaration"/>.
 	/// </summary>
@@ -249,36 +135,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitMethodDeclaration([NotNull] MyJavaParser.MethodDeclarationContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.genericMethodDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterGenericMethodDeclaration([NotNull] MyJavaParser.GenericMethodDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.genericMethodDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitGenericMethodDeclaration([NotNull] MyJavaParser.GenericMethodDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constructorDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterConstructorDeclaration([NotNull] MyJavaParser.ConstructorDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constructorDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitConstructorDeclaration([NotNull] MyJavaParser.ConstructorDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.genericConstructorDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterGenericConstructorDeclaration([NotNull] MyJavaParser.GenericConstructorDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.genericConstructorDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitGenericConstructorDeclaration([NotNull] MyJavaParser.GenericConstructorDeclarationContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.fieldDeclaration"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -288,76 +144,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitFieldDeclaration([NotNull] MyJavaParser.FieldDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceBodyDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterInterfaceBodyDeclaration([NotNull] MyJavaParser.InterfaceBodyDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceBodyDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitInterfaceBodyDeclaration([NotNull] MyJavaParser.InterfaceBodyDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceMemberDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterInterfaceMemberDeclaration([NotNull] MyJavaParser.InterfaceMemberDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceMemberDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitInterfaceMemberDeclaration([NotNull] MyJavaParser.InterfaceMemberDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterConstDeclaration([NotNull] MyJavaParser.ConstDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitConstDeclaration([NotNull] MyJavaParser.ConstDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constantDeclarator"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterConstantDeclarator([NotNull] MyJavaParser.ConstantDeclaratorContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constantDeclarator"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitConstantDeclarator([NotNull] MyJavaParser.ConstantDeclaratorContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.interfaceMethodDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterInterfaceMethodDeclaration([NotNull] MyJavaParser.InterfaceMethodDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.interfaceMethodDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitInterfaceMethodDeclaration([NotNull] MyJavaParser.InterfaceMethodDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.genericInterfaceMethodDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterGenericInterfaceMethodDeclaration([NotNull] MyJavaParser.GenericInterfaceMethodDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.genericInterfaceMethodDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitGenericInterfaceMethodDeclaration([NotNull] MyJavaParser.GenericInterfaceMethodDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.variableDeclarators"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterVariableDeclarators([NotNull] MyJavaParser.VariableDeclaratorsContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.variableDeclarators"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitVariableDeclarators([NotNull] MyJavaParser.VariableDeclaratorsContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.variableDeclarator"/>.
 	/// </summary>
@@ -378,36 +164,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitVariableDeclaratorId([NotNull] MyJavaParser.VariableDeclaratorIdContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.enumConstantName"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterEnumConstantName([NotNull] MyJavaParser.EnumConstantNameContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.enumConstantName"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitEnumConstantName([NotNull] MyJavaParser.EnumConstantNameContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.type"/>.
 	/// </summary>
@@ -438,26 +194,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitPrimitiveType([NotNull] MyJavaParser.PrimitiveTypeContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeArguments"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeArguments([NotNull] MyJavaParser.TypeArgumentsContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeArguments"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeArguments([NotNull] MyJavaParser.TypeArgumentsContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeArgument"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeArgument([NotNull] MyJavaParser.TypeArgumentContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeArgument"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeArgument([NotNull] MyJavaParser.TypeArgumentContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.qualifiedNameList"/>.
 	/// </summary>
@@ -519,16 +255,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitMethodBody([NotNull] MyJavaParser.MethodBodyContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constructorBody"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterConstructorBody([NotNull] MyJavaParser.ConstructorBodyContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constructorBody"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitConstructorBody([NotNull] MyJavaParser.ConstructorBodyContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.qualifiedName"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -548,146 +274,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitLiteral([NotNull] MyJavaParser.LiteralContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotation"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotation([NotNull] MyJavaParser.AnnotationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotation"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotation([NotNull] MyJavaParser.AnnotationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationName"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationName([NotNull] MyJavaParser.AnnotationNameContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationName"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationName([NotNull] MyJavaParser.AnnotationNameContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValuePairs"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterElementValuePairs([NotNull] MyJavaParser.ElementValuePairsContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValuePairs"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitElementValuePairs([NotNull] MyJavaParser.ElementValuePairsContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValuePair"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterElementValuePair([NotNull] MyJavaParser.ElementValuePairContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValuePair"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitElementValuePair([NotNull] MyJavaParser.ElementValuePairContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValue"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterElementValue([NotNull] MyJavaParser.ElementValueContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValue"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitElementValue([NotNull] MyJavaParser.ElementValueContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.elementValueArrayInitializer"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterElementValueArrayInitializer([NotNull] MyJavaParser.ElementValueArrayInitializerContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.elementValueArrayInitializer"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitElementValueArrayInitializer([NotNull] MyJavaParser.ElementValueArrayInitializerContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationTypeDeclaration([NotNull] MyJavaParser.AnnotationTypeDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationTypeDeclaration([NotNull] MyJavaParser.AnnotationTypeDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeBody"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationTypeBody([NotNull] MyJavaParser.AnnotationTypeBodyContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeBody"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationTypeBody([NotNull] MyJavaParser.AnnotationTypeBodyContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeElementDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationTypeElementDeclaration([NotNull] MyJavaParser.AnnotationTypeElementDeclarationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeElementDeclaration"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationTypeElementDeclaration([NotNull] MyJavaParser.AnnotationTypeElementDeclarationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationTypeElementRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationTypeElementRest([NotNull] MyJavaParser.AnnotationTypeElementRestContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationTypeElementRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationTypeElementRest([NotNull] MyJavaParser.AnnotationTypeElementRestContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationMethodOrConstantRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationMethodOrConstantRest([NotNull] MyJavaParser.AnnotationMethodOrConstantRestContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationMethodOrConstantRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationMethodOrConstantRest([NotNull] MyJavaParser.AnnotationMethodOrConstantRestContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationMethodRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationMethodRest([NotNull] MyJavaParser.AnnotationMethodRestContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationMethodRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationMethodRest([NotNull] MyJavaParser.AnnotationMethodRestContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.annotationConstantRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAnnotationConstantRest([NotNull] MyJavaParser.AnnotationConstantRestContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.annotationConstantRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAnnotationConstantRest([NotNull] MyJavaParser.AnnotationConstantRestContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.defaultValue"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterDefaultValue([NotNull] MyJavaParser.DefaultValueContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.defaultValue"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitDefaultValue([NotNull] MyJavaParser.DefaultValueContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.block"/>.
 	/// </summary>
@@ -709,16 +295,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitBlockStatement([NotNull] MyJavaParser.BlockStatementContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.localVariableDeclarationStatement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterLocalVariableDeclarationStatement([NotNull] MyJavaParser.LocalVariableDeclarationStatementContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.localVariableDeclarationStatement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitLocalVariableDeclarationStatement([NotNull] MyJavaParser.LocalVariableDeclarationStatementContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.localVariableDeclaration"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -739,106 +315,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitStatement([NotNull] MyJavaParser.StatementContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.catchClause"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterCatchClause([NotNull] MyJavaParser.CatchClauseContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.catchClause"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitCatchClause([NotNull] MyJavaParser.CatchClauseContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.catchType"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterCatchType([NotNull] MyJavaParser.CatchTypeContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.catchType"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitCatchType([NotNull] MyJavaParser.CatchTypeContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.finallyBlock"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterFinallyBlock([NotNull] MyJavaParser.FinallyBlockContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.finallyBlock"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitFinallyBlock([NotNull] MyJavaParser.FinallyBlockContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.resourceSpecification"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterResourceSpecification([NotNull] MyJavaParser.ResourceSpecificationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.resourceSpecification"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitResourceSpecification([NotNull] MyJavaParser.ResourceSpecificationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.resources"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterResources([NotNull] MyJavaParser.ResourcesContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.resources"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitResources([NotNull] MyJavaParser.ResourcesContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.resource"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterResource([NotNull] MyJavaParser.ResourceContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.resource"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitResource([NotNull] MyJavaParser.ResourceContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.switchBlockStatementGroup"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterSwitchBlockStatementGroup([NotNull] MyJavaParser.SwitchBlockStatementGroupContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.switchBlockStatementGroup"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitSwitchBlockStatementGroup([NotNull] MyJavaParser.SwitchBlockStatementGroupContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.switchLabel"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterSwitchLabel([NotNull] MyJavaParser.SwitchLabelContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.switchLabel"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitSwitchLabel([NotNull] MyJavaParser.SwitchLabelContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.forControl"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterForControl([NotNull] MyJavaParser.ForControlContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.forControl"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitForControl([NotNull] MyJavaParser.ForControlContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.forInit"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterForInit([NotNull] MyJavaParser.ForInitContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.forInit"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitForInit([NotNull] MyJavaParser.ForInitContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.enhancedForControl"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -849,26 +325,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitEnhancedForControl([NotNull] MyJavaParser.EnhancedForControlContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.forUpdate"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterForUpdate([NotNull] MyJavaParser.ForUpdateContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.forUpdate"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitForUpdate([NotNull] MyJavaParser.ForUpdateContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.parExpression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterParExpression([NotNull] MyJavaParser.ParExpressionContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.parExpression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitParExpression([NotNull] MyJavaParser.ParExpressionContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.expressionList"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -878,26 +334,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitExpressionList([NotNull] MyJavaParser.ExpressionListContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.statementExpression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterStatementExpression([NotNull] MyJavaParser.StatementExpressionContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.statementExpression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitStatementExpression([NotNull] MyJavaParser.StatementExpressionContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.constantExpression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterConstantExpression([NotNull] MyJavaParser.ConstantExpressionContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.constantExpression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitConstantExpression([NotNull] MyJavaParser.ConstantExpressionContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.expression"/>.
 	/// </summary>
@@ -939,26 +375,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitCreatedName([NotNull] MyJavaParser.CreatedNameContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.innerCreator"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterInnerCreator([NotNull] MyJavaParser.InnerCreatorContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.innerCreator"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitInnerCreator([NotNull] MyJavaParser.InnerCreatorContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.arrayCreatorRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterArrayCreatorRest([NotNull] MyJavaParser.ArrayCreatorRestContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.arrayCreatorRest"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitArrayCreatorRest([NotNull] MyJavaParser.ArrayCreatorRestContext context);
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.classCreatorRest"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -968,66 +384,6 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitClassCreatorRest([NotNull] MyJavaParser.ClassCreatorRestContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocation"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterExplicitGenericInvocation([NotNull] MyJavaParser.ExplicitGenericInvocationContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocation"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitExplicitGenericInvocation([NotNull] MyJavaParser.ExplicitGenericInvocationContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArguments"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterNonWildcardTypeArguments([NotNull] MyJavaParser.NonWildcardTypeArgumentsContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArguments"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitNonWildcardTypeArguments([NotNull] MyJavaParser.NonWildcardTypeArgumentsContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.typeArgumentsOrDiamond"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeArgumentsOrDiamond([NotNull] MyJavaParser.TypeArgumentsOrDiamondContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.typeArgumentsOrDiamond"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeArgumentsOrDiamond([NotNull] MyJavaParser.TypeArgumentsOrDiamondContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArgumentsOrDiamond"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterNonWildcardTypeArgumentsOrDiamond([NotNull] MyJavaParser.NonWildcardTypeArgumentsOrDiamondContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.nonWildcardTypeArgumentsOrDiamond"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitNonWildcardTypeArgumentsOrDiamond([NotNull] MyJavaParser.NonWildcardTypeArgumentsOrDiamondContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.superSuffix"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterSuperSuffix([NotNull] MyJavaParser.SuperSuffixContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.superSuffix"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitSuperSuffix([NotNull] MyJavaParser.SuperSuffixContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocationSuffix"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterExplicitGenericInvocationSuffix([NotNull] MyJavaParser.ExplicitGenericInvocationSuffixContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="MyJavaParser.explicitGenericInvocationSuffix"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitExplicitGenericInvocationSuffix([NotNull] MyJavaParser.ExplicitGenericInvocationSuffixContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.arguments"/>.
 	/// </summary>

@@ -52,11 +52,7 @@ methodDeclaration
 
 // FIELDS
 fieldDeclaration
-    :   type variableDeclarators ';'
-    ;
-
-variableDeclarators
-    :   variableDeclarator (',' variableDeclarator)*
+    :   type variableDeclarator ';'
     ;
 
 variableDeclarator
@@ -107,10 +103,6 @@ methodBody
     :   block
     ;
 
-constructorBody
-    :   block
-    ;
-
 qualifiedName
     :   Identifier ('.' Identifier)*
     ;
@@ -128,29 +120,21 @@ block
     ;
 
 blockStatement
-    :   localVariableDeclarationStatement
+    :   localVariableDeclaration ';'
     |   statement
     |   typeDeclaration
     ;
 
-localVariableDeclarationStatement
-    :    localVariableDeclaration ';'
-    ;
-
 localVariableDeclaration
-    :   type variableDeclarators
+    :   type variableDeclarator
     ;
 
 // FOR-EACH loop in java
 statement
     :   block
-    |   'for' '(' forControl ')' statement
+    |   'for' '(' enhancedForControl ')' statement
     |   ';'
     |   expression ';'
-    ;
-
-forControl
-    :   enhancedForControl
     ;
 
 enhancedForControl
@@ -230,16 +214,13 @@ arguments
 // §3.9 Keywords
 
 BOOLEAN       : 'boolean';
-BREAK         : 'break';
 CHAR          : 'char';
 CLASS         : 'class';
-CONTINUE      : 'continue';
 FOR           : 'for';
 NEW           : 'new';
 PRIVATE       : 'private';
 PUBLIC        : 'public';
 STATIC        : 'static';
-THIS          : 'this';
 VOID          : 'void';
 
 // §3.10.1 Integer Literals

@@ -19,14 +19,12 @@ namespace complex_compiler
     {
         //====================================================================================
         // Helper parts.
-        MyJavaParser parser;
 
 		// Lookup table for some translations
 		Dictionary<string,string> trans_dict = new Dictionary<string, string>()
 		{
 			{"boolean", "System.Boolean"},
 			{"char", "System.Char"},
-			{"System.out.println", "Console.WriteLine"}
 		};
 		string translate(string java)
 		{
@@ -52,11 +50,6 @@ namespace complex_compiler
         public T GetGlobalData<T>(IParseTree node)
         {
             return (T)databank.Get (node);
-        }
-
-        public Java2CSharp(MyJavaParser p)
-        {
-            this.parser = p;
         }
 
         //====================================================================================
@@ -303,7 +296,7 @@ namespace complex_compiler
 
                 // use the first rule of the parser
                 // MyJavaParser.CompilationUnitContext tree = parser.compilationUnit();
-                var my_action = new Java2CSharp(parser);
+                var my_action = new Java2CSharp();
                 var tree = parser.compilationUnit();
                 var walker = new ParseTreeWalker();
                 walker.Walk(my_action, tree);

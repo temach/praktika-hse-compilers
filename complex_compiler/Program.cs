@@ -44,11 +44,6 @@ namespace complex_compiler
 		public Java2CSharp(MyJavaParser p)
 		{
 			this.parser = p;
-
-			// Add the new namespace to the compile unit.
-			compileUnit.Namespaces.Add(samples);
-			// Add the new namespace import for the System namespace.
-			samples.Imports.Add(new CodeNamespaceImport("System"));
 		}
 
 		//====================================================================================
@@ -62,127 +57,93 @@ namespace complex_compiler
 
 		// Create a new CodeCompileUnit to contain 
 		// the program graph.
-		CodeCompileUnit compileUnit = new CodeCompileUnit();
+		public CodeCompileUnit compileUnit = new CodeCompileUnit();
 		// Declare a new namespace called Samples.
 		CodeNamespace samples = new CodeNamespace("Samples");
 
+		//====================================================================================
+		// Current, past values used while processing and assigning
+
+		// ONLY A  DEPTH OF ONE NESTING IS SUPPORTED CURRENTLY
+		// BECAUSE TO SUPPORT MORE DEPTH WE NEED CHAIN OF PARENTS
+
+		// When we find nested class we need to assign it to its parent
+		// so we track the parent
+		CodeTypeDeclaration parent_class;
+		// Always points at the current class being built
+		CodeTypeDeclaration current_class;
+
+		// Current method that is being build
+		CodeMemberMethod current_meth;
+
+		// Current field being build
+		CodeMemberField current_field;
 
 		//====================================================================================
 		// Big large declarations. Classes and class members.
 
 		public override void EnterCompilationUnit (MyJavaParser.CompilationUnitContext context)
 		{
-			result.Add ("using System;");
+			// Add the new namespace to the compile unit.
+			compileUnit.Namespaces.Add(samples);
+			// Add the new namespace import for the System namespace.
+			samples.Imports.Add(new CodeNamespaceImport("System"));
 		}
 
-		public override void EnterTypeDeclaration (MyJavaParser.TypeDeclarationContext context)
+		public override void EnterType (MyJavaParser.TypeContext context)
 		{
-			if (context.Parent.RuleIndex == parser.blockStatement ().RuleIndex) {
-				// if they are equal then we are declaring a nested class in a method
-				this.nested = true;
-				this.nested_classes.Add (new List<string> ());
-			} else {
-				this.nested = false;
-			}
+			current_field.Type = new CodeTypeReference (typeof(System.Char));
 		}
 
-		public override void ExitTypeDeclaration (MyJavaParser.TypeDeclarationContext context)
+		// EnterFieldMemberDecl and EnterLocalVariableDeclaration are the same things really
+		public override void EnterFieldMemberDecl (MyJavaParser.FieldMemberDeclContext context)
 		{
+			current_field = new CodeMemberField();
+			current_class.Members.Add(current_field);
 		}
 
+		public override void EnterLocalVariableDeclaration (MyJavaParser.LocalVariableDeclarationContext context)
+		{
+			current_field = new CodeMemberField();
+			current_class.Members.Add(current_field);
+		}
+
+		public override void EnterVariableDeclaratorId (MyJavaParser.VariableDeclaratorIdContext context)
+		{
+			current_field.Name = context.Identifier ().GetText();
+		}
 
 		public override void EnterClassDeclaration (MyJavaParser.ClassDeclarationContext context)
 		{
-			CodeTypeDeclaration cls_decl = new CodeTypeDeclaration (context.Identifier ().GetText ());
-			result.Add("class " + context.Identifier());
+			parent_class = current_class;
+			current_class = new CodeTypeDeclaration (context.Identifier ().GetText ());
+			current_class.IsClass = true;
+			samples.Types.Add (current_class);
 		}
 
-		public override void EnterClassBody (MyJavaParser.ClassBodyContext context)
+		public override void ExitClassDeclaration (MyJavaParser.ClassDeclarationContext context)
 		{
-			result.Add ("{");
-		}
-		public override void ExitClassBody (MyJavaParser.ClassBodyContext context)
-		{
-			result.Add ("}");
-		}
-
-		public override void EnterClassOrInterfaceModifier (MyJavaParser.ClassOrInterfaceModifierContext context)
-		{
-			result.Add (string.Join (" ", context.children.Select (x => x.GetText ())));
+			current_class = parent_class;
+			parent_class = null;
 		}
 
 		public override void EnterMethodDeclaration (MyJavaParser.MethodDeclarationContext context)
 		{
-			string ret = context.type () == null ? "void" : context.type ().GetText ();
-			string ws = " ";
-			result.Add (ret + ws + context.Identifier ().GetText () + ws);
+			current_meth = new CodeMemberMethod ();
+			current_meth.Attributes = MemberAttributes.Public;
+			current_meth.Name = context.Identifier ().GetText ();
+			current_meth.ReturnType = new CodeTypeReference (typeof(System.Double));
+			current_class.Members.Add (current_meth);
 		}
 
-		public override void EnterFormalParameters (MyJavaParser.FormalParametersContext context)
+		public override void EnterFormalParameter (MyJavaParser.FormalParameterContext context)
 		{
-			result.Add (context.GetText ());
-		}
-		
-		public override void EnterMethodBody (MyJavaParser.MethodBodyContext context)
-		{
-			result.Add ("{");
-		}
-
-		public override void ExitMethodBody (MyJavaParser.MethodBodyContext context)
-		{
-			result.Add ("}");
-		}
-
-		public override void ExitBlockStatement (MyJavaParser.BlockStatementContext context)
-		{
-			if (context.localVariableDeclaration () != null) {
-			}
-		}
-
-
-
-
-		//====================================================================================
-		// Assemble primitive type declarations into one string. 
-		// Becasue we lost all whitespace during parsing.
-
-		// When we exit expression with "new" we add a space
-		// since can not just use .GetText(); wich breaks "new"
-		public override void ExitExpression (MyJavaParser.ExpressionContext context)
-		{
-			if (context.creator () != null) {
-				// if we need to add space to new operator, do it here
-				SetGlobalData (context, "new " + context.creator ().GetText ());
-			} else {
-				// other expressions are __NOT__ sensitive to whitespace
-				SetGlobalData (context, context.GetText ());
-			}
-		}
-
-		// If we had an expression, 
-		// look it up in the databank, (because maybe it had "new" keyword)
-		// and we can not just use .GetText(); wich breaks "new"
-		public override void ExitVariableDeclarator (MyJavaParser.VariableDeclaratorContext context)
-		{
-			string res = context.variableDeclaratorId().GetText();
-			if (context.expression() != null)
-			{
-				// if there is an expression on the left side for initialization
-				res += "=" + GetGlobalData<string>(context.expression ());
-			}
-			SetGlobalData (context, res);
-		}
-
-		// combine the left and right parts of local var declaration.
-		// Because we again need to separate "variable type" with "variable name" by a space
-		public override void ExitLocalVariableDeclaration (MyJavaParser.LocalVariableDeclarationContext context)
-		{
-			result.Add(context.type().GetText() 
-				+ " " 
-				+ GetGlobalData<string>(context.variableDeclarator()) 
-				+ ";"
+			current_meth.Parameters.Add(
+				new CodeParameterDeclarationExpression(context.type().GetText(), context.variableDeclaratorId().GetText())
 			);
 		}
+
+
 
 
 
@@ -193,6 +154,21 @@ namespace complex_compiler
 
 	class MainClass
 	{
+		/// <summary>
+		/// Generate CSharp source code from the compile unit.
+		/// </summary>
+		/// <param name="filename">Output file name</param>
+		public static void GenerateCSharpCode(string fileName, CodeCompileUnit unit)
+		{
+			CodeDomProvider provider = CodeDomProvider.CreateProvider("CSharp");
+			CodeGeneratorOptions options = new CodeGeneratorOptions();
+			options.BracingStyle = "C";
+			using (StreamWriter sourceWriter = new StreamWriter(fileName))
+			{
+				provider.GenerateCodeFromCompileUnit(
+					unit, sourceWriter, options);
+			}
+		}
 
 		public static void Main (string[] args)
 		{
@@ -211,7 +187,8 @@ namespace complex_compiler
 					var tree = parser.compilationUnit();
 					var walker = new ParseTreeWalker();
 					walker.Walk(my_action, tree);
-					Console.WriteLine (my_action.Output);
+					GenerateCSharpCode("OutputUnit.cs", my_action.compileUnit);
+					// Console.WriteLine (my_action.Output);
 					Console.ReadLine();
 				}
 				catch (Exception e)

@@ -26,6 +26,7 @@ namespace complex_compiler
 		{
 			{"boolean", "System.Boolean"},
 			{"char", "System.Char"},
+			{"System.out.println", "Console.WriteLine"}
 		};
 		string translate(string java)
 		{
@@ -40,10 +41,6 @@ namespace complex_compiler
         // This is a dictionary of nodes to values.
         // Now we can store a value for each node.
         ParseTreeProperty<object> databank = new ParseTreeProperty<object>();
-
-        public string Output {
-            get { return string.Join ("\n", this.result); }
-        }
 
         // store some data for the current node
         public void SetGlobalData(IParseTree node, object data)
@@ -65,12 +62,6 @@ namespace complex_compiler
         //====================================================================================
         // Storage for the results of parsing and analysing
 
-        // What we need to write to output "blabla.cs" file. Then we will compile this file.
-        public List<string> result = new List<string>();
-
-        public bool nested = false;
-        public List<List<string>> nested_classes = new List<List<string>> ();
-
         // Create a new CodeCompileUnit to contain 
         // the program graph.
         public CodeCompileUnit compileUnit = new CodeCompileUnit();
@@ -80,14 +71,18 @@ namespace complex_compiler
         //====================================================================================
         // Current, past values used while processing and assigning
 
-        // ONLY A  DEPTH OF ONE NESTING IS SUPPORTED CURRENTLY
-        // BECAUSE TO SUPPORT MORE DEPTH WE NEED CHAIN OF PARENTS
+		// Current class is always the last in the list
+		List<CodeTypeDeclaration> nesting = new List<CodeTypeDeclaration>();
 
         // When we find nested class we need to assign it to its parent
         // so we track the parent
-        CodeTypeDeclaration parent_class;
+        CodeTypeDeclaration parent_class {
+			get { return nesting.Count () > 1 ? nesting.ElementAt(nesting.Count() - 2) : null; }
+		}
         // Always points at the current class being built
-        CodeTypeDeclaration current_class;
+        CodeTypeDeclaration current_class {
+			get { return nesting.Count () > 0 ? nesting.Last () : null; }
+		}
 
         // Current method that is being build
         CodeMemberMethod current_meth;
@@ -97,6 +92,8 @@ namespace complex_compiler
 
         // Current variable that is being initialized or declared;
         CodeVariableDeclarationStatement current_variable;
+
+		bool is_public_static = false;
 
         //====================================================================================
         // Big large declarations. Classes and class members.
@@ -130,8 +127,9 @@ namespace complex_compiler
 
         public override void EnterClassDeclaration (MyJavaParser.ClassDeclarationContext context)
         {
-            parent_class = current_class;
-            current_class = new CodeTypeDeclaration (context.Identifier ().GetText ());
+			// PUSH new class onto nesting stack
+			nesting.Add (new CodeTypeDeclaration (context.Identifier ().GetText ()));
+			// we are working with the NEW class
             current_class.IsClass = true;
             if (parent_class != null) {
                 parent_class.Members.Add (current_class);
@@ -142,15 +140,23 @@ namespace complex_compiler
 
         public override void ExitClassDeclaration (MyJavaParser.ClassDeclarationContext context)
         {
-            current_class = parent_class;
-            parent_class = null;
+			// remove last nesting item, Pop from the nesting stack
+			nesting.RemoveAt (nesting.Count () - 1);
         }
+
+		public override void EnterClassOrInterfaceModifier (MyJavaParser.ClassOrInterfaceModifierContext context)
+		{
+			is_public_static = false;
+			var modifiers = context.children.Select (x => x.GetText ());
+			if (modifiers.Contains ("public") && modifiers.Contains ("static")) {
+				is_public_static = true;
+			}
+		}
 
         public override void EnterMethodDeclaration (MyJavaParser.MethodDeclarationContext context)
         {
-			// TODO: fix main method finding. Add flags to check for "static public"
 			string name = context.Identifier ().GetText ();
-			if (name == "main") {
+			if (name == "main" && is_public_static) {
 				current_meth = new CodeEntryPointMethod();
 			} else {
             	current_meth = new CodeMemberMethod ();

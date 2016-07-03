@@ -14,6 +14,14 @@ class A {
         char c = 'L';
         class Inner {
             char wow = 'A';
+            boolean[] data = {false, true, true, false};
+
+            class DeeplyNested {
+                char kek = 'k';
+            }
+        }
+        for (boolean item : Inner.data) {
+            System.out.println(item && true);
         }
         Inner inner = new Inner();
         flag = c == inner.wow;

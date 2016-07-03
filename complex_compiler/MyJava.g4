@@ -56,7 +56,16 @@ fieldDeclaration
     ;
 
 variableDeclarator
-    :   variableDeclaratorId ('=' expression)?
+    :   variableDeclaratorId ('=' variableInitializer)?
+    ;
+
+variableInitializer
+    :   arrayInitializer
+    |   expression
+    ;
+
+arrayInitializer
+    :   '{' (variableInitializer (',' variableInitializer)* (',')? )? '}'
     ;
 
 variableDeclaratorId

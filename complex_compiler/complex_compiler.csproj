@@ -42,6 +42,7 @@
     <Compile Include="MyJavaLexer.cs" />
     <Compile Include="MyJavaListener.cs" />
     <Compile Include="MyJavaParser.cs" />
+    <Compile Include="Java2CSharp.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -31,62 +31,12 @@ namespace complex_compiler
             }
         }
 
-		public static bool CompileCSharpCode(string sourceFile, string exeFile)
+
+		public static void Work(string java, string csharp)
 		{
-			CSharpCodeProvider provider = new CSharpCodeProvider();
-
-			// Build the parameters for source compilation.
-			CompilerParameters cp = new CompilerParameters();
-
-			// Add an assembly reference.
-			cp.ReferencedAssemblies.Add( "System.dll" );
-
-			// Generate an executable instead of
-			// a class library.
-			cp.GenerateExecutable = true;
-
-			// Set the assembly file name to generate.
-			cp.OutputAssembly = exeFile;
-
-			// Save the assembly as a physical file.
-			cp.GenerateInMemory = false;
-
-			// Invoke compilation.
-			CompilerResults cr = provider.CompileAssemblyFromFile(cp, sourceFile);
-
-			if (cr.Errors.Count > 0)
+			using (var fs = new FileStream(java, FileMode.Open))
 			{
-				// Display compilation errors.
-				Console.WriteLine("Errors building {0} into {1}",
-					sourceFile, cr.PathToAssembly);
-				foreach (CompilerError ce in cr.Errors)
-				{
-					Console.WriteLine("  {0}", ce.ToString());
-					Console.WriteLine();
-				}
-			}
-			else
-			{
-				Console.WriteLine("Source {0} built into {1} successfully.",
-					sourceFile, cr.PathToAssembly);
-			}
-
-			// Return the results of compilation.
-			if (cr.Errors.Count > 0)
-			{
-				return false;
-			}
-			else
-			{
-				return true;
-			}
-		}
-
-        public static void Main (string[] args)
-        {
-            try
-            {
-                var input = new AntlrInputStream(new FileStream("../../TestInput.java", FileMode.Open));
+				var input = new AntlrInputStream(fs);
                 var lexer = new MyJavaLexer(input);
                 var tokens = new CommonTokenStream(lexer);
                 var parser = new MyJavaParser(tokens);
@@ -97,11 +47,24 @@ namespace complex_compiler
                 var tree = parser.compilationUnit();
                 var walker = new ParseTreeWalker();
                 walker.Walk(my_action, tree);
-                GenerateCSharpCode("OutputUnit.cs", my_action.compileUnit);
-				CompileCSharpCode("OutputUnit.cs", "myexe.exe");
-				Process.Start("myexe.exe");
+                GenerateCSharpCode(csharp, my_action.compileUnit);
+			}
+		}
 
-                // Console.WriteLine (my_action.Output);
+        public static void Main (string[] args)
+        {
+            try
+            {
+				if (args.Length < 2)
+				{
+					throw new System.Exception("" +
+						"Usage: \n\n\n" +
+						" Compiling into c sharp: \n" +
+						" java2csharp input_file.java output_file.cs");
+				}
+				string in_file_java = args[0];
+				string out_file_csharp = args[1];
+				Work(in_file_java, out_file_csharp);
             }
             catch (Exception e)
             {

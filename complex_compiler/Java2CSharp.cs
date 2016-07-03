@@ -56,11 +56,6 @@ namespace complex_compiler
             return (T)databank.Get (node);
         }
 
-        public Java2CSharp(MyJavaParser p)
-        {
-            this.parser = p;
-        }
-
         //====================================================================================
         // Storage for the results of parsing and analysing
 
@@ -341,7 +336,7 @@ namespace complex_compiler
 			);
 			current_loop = new CodeIterationStatement ();
 			// initStatement parameter for pre-loop initialization.
-			current_loop.InitStatement = new CodeSnippetStatement("System.Int32 " + counter_name + " = 1");
+			current_loop.InitStatement = new CodeSnippetStatement("System.Int32 " + counter_name + " = 0");
 			// testExpression parameter to test for continuation condition.
 			current_loop.TestExpression 
 				= new CodeSnippetExpression (counter_name + " < " + context.expression ().GetText () + ".Count()");

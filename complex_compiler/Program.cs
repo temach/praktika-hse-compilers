@@ -93,7 +93,7 @@ namespace complex_compiler
 
                 // use the first rule of the parser
                 // MyJavaParser.CompilationUnitContext tree = parser.compilationUnit();
-                var my_action = new Java2CSharp(parser);
+                var my_action = new Java2CSharp();
                 var tree = parser.compilationUnit();
                 var walker = new ParseTreeWalker();
                 walker.Walk(my_action, tree);

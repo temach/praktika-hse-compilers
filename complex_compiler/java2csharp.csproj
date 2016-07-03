@@ -6,7 +6,7 @@
     <ProjectGuid>{08F1C754-CF92-4915-A37C-3290D5F1E335}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>complex_compiler</RootNamespace>
-    <AssemblyName>complex_compiler</AssemblyName>
+    <AssemblyName>java2csharp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">

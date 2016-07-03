@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "complex_compiler", "complex_compiler\complex_compiler.csproj", "{08F1C754-CF92-4915-A37C-3290D5F1E335}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "java2csharp", "complex_compiler\java2csharp.csproj", "{08F1C754-CF92-4915-A37C-3290D5F1E335}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "compiler_csharp", "compiler_csharp\compiler_csharp.csproj", "{0504C177-1687-48A9-A204-98FA25FC2A33}"
 EndProject

@@ -155,6 +155,26 @@ public interface IMyJavaListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitVariableDeclarator([NotNull] MyJavaParser.VariableDeclaratorContext context);
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context);
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.variableDeclaratorId"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

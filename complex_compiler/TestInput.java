@@ -20,10 +20,10 @@ class A {
                 char kek = 'k';
             }
         }
-        for (boolean item : Inner.data) {
+        Inner inner = new Inner();
+        for (boolean item : inner.data) {
             System.out.println(item && true);
         }
-        Inner inner = new Inner();
         flag = c == inner.wow;
         System.out.println(flag);
     }

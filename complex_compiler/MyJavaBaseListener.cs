@@ -177,6 +177,30 @@ public partial class MyJavaBaseListener : IMyJavaListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitVariableDeclarator([NotNull] MyJavaParser.VariableDeclaratorContext context) { }
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="MyJavaParser.variableInitializer"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitVariableInitializer([NotNull] MyJavaParser.VariableInitializerContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="MyJavaParser.arrayInitializer"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitArrayInitializer([NotNull] MyJavaParser.ArrayInitializerContext context) { }
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="MyJavaParser.variableDeclaratorId"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
